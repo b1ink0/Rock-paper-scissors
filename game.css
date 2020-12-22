@@ -1,0 +1,206 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+section{
+    height: 100hv;
+}
+body {
+    height: 100hv; 
+    font-family: sans-serif;
+    color: rgb(243, 243, 243);
+    background: linear-gradient(47deg, rgba(63,13,123,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+.nav {
+    position: relative;
+    top: 10px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p h1, .c h1 {
+    font-size: 25px;        
+}
+.p p,.c p {
+    font-size: 25px;
+    padding: 5px;
+}
+.c {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.page1 {
+    position: relative;
+    top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    font-size: 30px;
+    transition: opacity 0.5s ease;
+
+}
+.page1 button{
+    width: 170px;
+    height: 50px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    color: rgb(243, 243, 243);
+    font-size: 25px;
+    margin: 90px;
+    background-color: rgb(66, 147, 172);
+    cursor: pointer;
+    
+}
+.page1 button:hover{
+    background-color: rgb(78, 173, 202);
+    color: rgb(226, 226, 226);
+    transform: scale(1.1);
+}
+.page2 {
+    width: 100%;
+    position: relative;
+    top: -240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease 0.5s;
+}
+.page2 h1 {
+    font-size: 30px;
+}
+.hand {
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: space-around;
+}
+.playerHand {
+    transform: rotateY(180deg);
+}
+.playerOption {
+    height: 50px;
+    width: 50%;
+    position: relative;
+    top: -30px;
+    display: flex;
+    justify-content: space-around;
+}
+.playerOption button {
+    width: 130px;
+    height: 40px;
+    border-radius: 5px;
+    background: none;
+    border: none;
+    color: rgb(243, 243, 243);
+    font-size: 25px;
+    background-color: rgb(66, 147, 172);
+    cursor: pointer;
+}
+.page2 button:hover{
+    background-color: rgb(78, 173, 202);
+    color: rgb(226, 226, 226);
+    transform: scale(1.1);
+}
+div.fadeOut {
+    opacity: 0;
+    pointer-events: none;
+}
+div.fadeIn {
+    opacity: 1;
+    pointer-events: all;
+}
+@media only screen and (max-width: 768px){
+    body{
+        height: 875px;
+    }
+    .page2 button {
+        transform: scale(0.8);
+    }
+    .page2 button:hover {
+        transform: scale(0.9);
+        
+    }
+    .hand {
+        transform: scale(0.8);
+    }
+    .page1 h1 {
+        font-size: 25px;
+    }
+    .page1 button {
+        transform: scale(0.8);
+    }
+    .nav {
+        transform: scale(0.9);
+    }
+    .page1 button:hover {
+        transform: scale(0.9);
+}
+}
+@keyframes shakePlayer {
+    0% {
+        transform: rotateY(180deg) translateY(-30px);
+    }
+    15% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    30% {
+        transform: rotateY(180deg) translateY(-30px);
+    }
+    45% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    55% {
+        transform: rotateY(180deg) translateY(-30px);
+    }
+    65% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+    75% {
+        transform: rotateY(180deg) translateY(-30px);
+    }
+    100% {
+        transform: rotateY(180deg) translateY(0px);
+    }
+}
+@keyframes shakeComputer {
+    0% {
+        transform: translateY(-30px);
+    }
+    15% {
+        transform: translateY(0px);
+    }
+    30% {
+        transform: translateY(-30px);
+    }
+    45% {
+        transform: translateY(0px);
+    }
+    55% {
+        transform: translateY(-30px);
+    }
+    65% {
+        transform: translateY(0px);
+    }
+    75% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+ 
